@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+Guillaume Comfort, IT202AL, Project 8, Part 2
+Features 7 buttons, each with respective scripts. 
+-->
+<head>
+    <script>
+        function onClick() {
+            document.body.style.backgroundColor = "#04bdaa";
+            document.getElementById("onclick").innerHTML = "You clicked me!";
+        }
+        function onmouseHover() {
+            document.body.style.backgroundColor = "#1bde6f";
+            document.getElementById("onmousehover").innerHTML = "You hovered over me!";
+        }
+        function onmouseDown() {
+            document.body.style.backgroundColor = "#2483ff";
+            document.getElementById("onmousedown").innerHTML = "You held me down!";
+        }
+        function onmouseUp() {
+            document.body.style.backgroundColor = "#ff4af6";
+            document.getElementById("onmouseup").innerHTML = "You let me go!";
+        }
+        function ondblClick() {
+            document.body.style.backgroundColor = "#ff4ab1";
+            document.getElementById("ondblclick").innerHTML = "You double clicked me!";
+        }
+        function showImage() {
+            const myImage = document.getElementById("cat");
+                myImage.style.display = "block";
+            document.getElementById("myCat").innerHTML = "You've found my cat!";
+            }
+        function hideImage() {
+            const myImage = document.getElementById("cat");
+                myImage.style.display = "none";
+            document.getElementById("myCat").innerHTML = "You've lost my cat!";
+        }
+    </script>
+</head>
+<body id="colorMe">
+    <button onclick="onClick()">Click me!</button><p id="onclick"></p><br>
+    <button onmouseover="onmouseHover()">Hover me!</button><p id="onmousehover"></p><br>
+    <button onmousedown="onmouseDown()">Hold me down!</button><p id="onmousedown"></p><br>
+    <button onmouseup="onmouseUp()">Let me go!</button><p id="onmouseup"></p><br>
+    <button ondblclick="ondblClick()">Double click me!</button><p id="ondblclick"></p><br>
+    <button onclick="showImage()">Show image!</button>
+    <button onclick="hideImage()">Hide image!</button>
+    <br><p id="myCat"></p>
+    <img id="cat" src="mycat.jpg" style="display: none;">
+</body>
+
+</html>
