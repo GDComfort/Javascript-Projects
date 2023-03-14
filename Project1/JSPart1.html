@@ -15,10 +15,10 @@ then pushes if so, then finally pops them into and from an array after getting i
                 divby5.push(i);
             }
         }
-        document.write("The numbers divisible by 5 between "+numl+" and "+numh+" are: "+divby5)
-        document.write("<br>The length of the array is: " + divby5.length)
+        document.write(`The numbers divisible by 5 between ${numl} and ${numh} are: ${divby5}`)
+        document.write(`<br>The length of the array is: ${divby5.length}`)
         for (let i = divby5.length; i > 0; i--) {
-            document.write("<br>" + divby5.pop(i))
+            document.write(`<br>${divby5.pop(i)}`)
         }
     </script>
 
