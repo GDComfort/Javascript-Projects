@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- 
+Guillaume Comfort, IT202AL, Lab 7, Part 2
 Features 7 buttons, each with respective scripts. 
 -->
 <head>
     <script>
         function onClick() {
-            document.body.style.backgroundColor = "#04bdaa";
+            const BGC = document.getElementById("colorMe").style
+                BGC.backgroundColor = "#04bdaa";
             document.getElementById("onclick").innerHTML = "You clicked me!";
         }
         function onmouseHover() {
-            document.body.style.backgroundColor = "#1bde6f";
+            const BGC = document.getElementById("colorMe").style
+                BGC.backgroundColor = "#1bde6f";
             document.getElementById("onmousehover").innerHTML = "You hovered over me!";
         }
         function onmouseDown() {
-            document.body.style.backgroundColor = "#2483ff";
+            const BGC = document.getElementById("colorMe").style
+                BGC.backgroundColor = "#2483ff";
             document.getElementById("onmousedown").innerHTML = "You held me down!";
         }
         function onmouseUp() {
-            document.body.style.backgroundColor = "#ff4af6";
+            const BGC = document.getElementById("colorMe").style
+                BGC.backgroundColor = "#ff4af6";
             document.getElementById("onmouseup").innerHTML = "You let me go!";
         }
         function ondblClick() {
-            document.body.style.backgroundColor = "#ff4ab1";
+            const BGC = document.getElementById("colorMe").style
+                BGC.backgroundColor = "#ff4ab1";
             document.getElementById("ondblclick").innerHTML = "You double clicked me!";
         }
         function showImage() {
