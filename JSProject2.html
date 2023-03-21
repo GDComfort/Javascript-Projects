@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+Guillaume Comfort, IT202AL, Project 8, Part 2
+Features 7 buttons, each with respective scripts. 
+-->
+<head>
+    <!--Getting Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        //Initializing
+        $(document).ready(function() {
+            //Changes on click
+            $("#onclick").click(function(){
+                $("#colorMe").css("background-color", "#04bdaa");
+                $("#onc").text("You clicked me!");
+            });
+            //Changes on hover
+            $("#onmousehover").hover(function(){
+                $("#colorMe").css("background-color", "#1bde6f");
+                $("#onh").text("You hovered over me!");
+            });
+            //Changes on holding/clicking down
+            $("#onmousedown").mousedown(function(){
+                $("#colorMe").css("background-color", "#2483ff");
+                $("#ond").text("You held me down!");
+            });
+            //Changes on releasing click
+            $("#onmouseup").mouseup(function(){
+                $("#colorMe").css("background-color", "#ff4af6");
+                $("#onu").text("You let me go!");
+            });
+            //Changes on double clicking
+            $("#ondblclick").dblclick(function(){
+                $("#colorMe").css("background-color", "#ff4ab1");
+                $("#ondbl").text("You double clicked me!");
+            });
+            //Fades in on click
+            $("#showphoto").click(function(){
+                $("#cat").fadeIn(200);
+                $("#myCat").text("You found my cat!");
+            });
+            //Fades out on click
+            $("#hidephoto").click(function(){
+                $("#cat").fadeOut(200);
+                $("#myCat").text("You lost my cat!");
+            });
+            //Toggles fade on click
+            $("#hideandseek").click(function(){
+                $("#cat").fadeToggle(200);
+                $("#myCat").text("You're playing hide and seek with my cat!");
+            });
+        });
+    </script>
+</head>
+<body id="colorMe">
+    <button id="onclick">Click me!</button><p id="onc"></p><br>
+    <button id="onmousehover">Hover me!</button><p id="onh"></p><br>
+    <button id="onmousedown">Hold me down!</button><p id="ond"></p><br>
+    <button id="onmouseup">Let me go!</button><p id="onu"></p><br>
+    <button id="ondblclick">Double click me!</button><p id="ondbl"></p><br>
+    <button id="showphoto">Show image!</button>
+    <button id="hidephoto">Hide image!</button>
+    <button id="hideandseek">Show / Hide Image!</button>
+    <br><p id="myCat"></p>
+    <img id="cat" src="mycat.jpg" style="display: none;">
+</body>
+
+</html>
